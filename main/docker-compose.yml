@@ -13,8 +13,8 @@ services:
             - db
 
     queue:
-    build:
-        context:
+        build:
+            context: .
             dockerfile: Dockerfile
         command: 'python3 consumer.py'
         depends_on: 
