@@ -4,10 +4,19 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+        command: 'python3 main.py'
         ports:
             - 8001:5000
         volumes:
             - .:/app
+        depends_on: 
+            - db
+
+    queue:
+    build:
+        context:
+            dockerfile: Dockerfile
+        command: 'python3 consumer.py'
         depends_on: 
             - db
 

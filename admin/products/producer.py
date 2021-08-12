@@ -11,5 +11,6 @@ connection = pika.BlockingConnection(params)
 
 channel = connection.channel()
 
+# Publish in the main app rather than the admin app
 def publish():
-    channel.basic_publish(exchange='', routing_key='admin', body='hello')
+    channel.basic_publish(exchange='', routing_key='main', body='hello')
