@@ -41,6 +41,8 @@ class ProductViewSet(viewsets.ViewSet):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class UserAPIView(APIView):
+
+    # /api/user
     def get(self, _):
         users = User.objects.all()
         user = random.choice(users)
