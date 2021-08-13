@@ -9,7 +9,7 @@ This project implements a backend and frontend CRUD application for an e-commerc
 
 # Technologies
 The frontend of this project is written using Angular, React, Vue, and Svelt.
-The backend is written using Django and Flash.
+The backend is written using Django and Flask.
 
 # Installation
 
