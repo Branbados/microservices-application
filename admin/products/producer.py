@@ -1,5 +1,5 @@
 import os
-import pika
+import pika, json
 
 __location__ = os.path.realpath(
     os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -12,5 +12,6 @@ connection = pika.BlockingConnection(params)
 channel = connection.channel()
 
 # Publish in the main app rather than the admin app
-def publish():
-    channel.basic_publish(exchange='', routing_key='main', body='hello')
+def publish(method, body):
+    properties = pika.BasicProperties(method)
+    channel.basic_publish(exchange='', routing_key='main', body=json.dumps(body), properties=properties)
