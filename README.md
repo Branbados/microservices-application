@@ -5,7 +5,7 @@
 * [License](#License)
 
 # Introduction
-This project implements an e-commerce site with a microservice architecture.
+This project implements a backend and frontend CRUD application for an e-commerce site with a microservice architecture.
 
 # Technologies
 The frontend of this project is written using Angular, React, Vue, and Svelt.
